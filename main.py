@@ -12,7 +12,7 @@ def getItemsFromUniversalis(items=None):
             items = valuesData
     prices = {}
     for i in items:
-        with requests.request("GET", universalis_url + datacenter + "/" + valuesData[i]['id']) as response:
+        with requests.request("GET", universalis_url + datacenter + "/" + valuesData[i]['id'] + "?entries=1") as response:
             responseJson = response.json()
             price = responseJson['listings'][0]['pricePerUnit']
             price_per_tomestone = float(price) / float(valuesData[i]['tomestone_price'])
