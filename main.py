@@ -1,7 +1,6 @@
 import json
 import requests
 
-#TODO string formatting so I can make a nice looking table of the resuls
 #TODO A loading... message while data is fetched from Universalis
 #TODO maybe use better variable names
 
